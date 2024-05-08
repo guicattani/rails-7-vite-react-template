@@ -4,13 +4,13 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently -c bgMagentaBright,bgRed.whiteBright --names VITE,RAILS \"vite\" \"bundle exec rails s\"",
     "build": "tsc -p tsconfig.prod.json && vite build",
     "test": "NODE_ENV=test jest",
     "debugtest": "DEBUG_PRINT_LIMIT=100000 NODE_ENV=test jest"
   },
   "engines": {
-    "node": "16"
+    "node": "18"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -28,6 +28,7 @@
     "react-tabs": "^6.0.2"
   },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "@swc/core": "^1.3.70",
     "@swc/jest": "^0.2.27",
     "@testing-library/jest-dom": "^5.17.0",
@@ -42,9 +43,9 @@
     "react-test-renderer": "^18.2.0",
     "sass": "^1.62.1",
     "ts-node": "^10.9.1",
-    "vite": "^4.4.4",
+    "vite": "^5.4.19",
     "vite-plugin-rails": "^0.1.0",
-    "vite-plugin-ruby": "^3.2.2",
+    "vite-plugin-ruby": "^5.1.1",
     "vite-plugin-windicss": "^1.8.10"
   }
 }

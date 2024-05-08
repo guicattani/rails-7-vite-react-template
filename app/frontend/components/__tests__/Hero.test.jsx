@@ -1,5 +1,4 @@
-import React from "react";
-import { act } from "react-dom/test-utils";
+import { React, act } from "react";
 import { screen, waitFor } from "@testing-library/react";
 import renderer from "react-test-renderer";
 import ReactDOM from "react-dom/client";
